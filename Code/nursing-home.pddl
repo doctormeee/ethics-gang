@@ -14,8 +14,9 @@
         dining
         kitchen
 
-        ; Items (, wallet each.)
-        medication clothing 
+        ; Items
+        medication 
+        clothing 
         journal-ben journal-emma journal-mohammed ; Assumed all residents have a journal each
         wallet-ben wallet-emma wallet-mohammed wallet-sophia wallet-mark ; Assumed all described personas have a wallet each
         medical-record-ben medical-record-emma medical-record-mohammed 
