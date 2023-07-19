@@ -47,4 +47,11 @@
         ; Robot grippers
         gripper-left gripper-right
     )
+
+    (:predicates 
+        (ROOM ?x)(PERSON ?x) (ITEM ?x) 
+        (HUNGRY ?x) (INJURED ?x) (SICK ?x) (NEEDS-MEDICATION ?x)
+        (GRIPPER ?x) (ROBOT-AT-ROOM ?x) (CARRY ?x ?y)
+        (ITEM-AT-ROOM ?x ?y)
+    )
 )
