@@ -90,5 +90,10 @@
         (CONNECTED corridor-block6 living-area)
         (CONNECTED living-area common-toilet)
         (CONNECTED living-area board-game-room)
+
+        ; People
+        (PERSON sophia)
+        (PERSON ben) (PERSON emma) (PERSON mohammed)
+        (PERSON mark)
     )
 )
