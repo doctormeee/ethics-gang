@@ -49,9 +49,46 @@
     )
 
     (:predicates 
-        (ROOM ?x)(PERSON ?x) (ITEM ?x) 
+        (ROOM ?x) (CONNECTED ?x ?y)
+        (PERSON ?x) (ITEM ?x) 
         (HUNGRY ?x) (INJURED ?x) (SICK ?x) (NEEDS-MEDICATION ?x)
         (GRIPPER ?x) (ROBOT-AT-ROOM ?x) (CARRY ?x ?y)
         (ITEM-AT-ROOM ?x ?y)
+    )
+
+    (:init 
+        ; Rooms
+        (ROOM room1) (ROOM room2) 
+        (ROOM private-bathroom1) (ROOM private-bathroom2) 
+        (ROOM corridor-block1) (ROOM corridor-block2) (ROOM corridor-block3) (ROOM corridor-block4) (ROOM corridor-block5) (ROOM corridor-block6) 
+        (ROOM reception-security)
+        (ROOM nurse-main-station)
+        (ROOM laundry)
+        (ROOM common-toilet)
+        (ROOM medical-area)
+        (ROOM board-game-room)
+        (ROOM living-area)
+        (ROOM dining)
+        (ROOM kitchen)
+
+        ; Floor plan
+        (CONNECTED private-bathroom1 room1) ; (CONNECTED room1 private-bathroom1)?
+        (CONNECTED room1 corridor-block3)
+        (CONNECTED corridor-block3 room2)
+        (CONNECTED room2 private-bathroom2)
+        (CONNECTED corridor-block3 corridor-block2)
+        (CONNECTED corridor-block2 nurse-main-station)
+        (CONNECTED nurse-main-station corridor-block1)
+        (CONNECTED corridor-block1 reception-security)
+        (CONNECTED nurse-main-station corridor-block4)
+        (CONNECTED corridor-block4 laundry)
+        (CONNECTED nurse-main-station corridor-block5)
+        (CONNECTED corridor-block5 medical-area)
+        (CONNECTED corridor-block5 corridor-block6)
+        (CONNECTED corridor-block6 dining)
+        (CONNECTED dining kitchen)
+        (CONNECTED corridor-block6 living-area)
+        (CONNECTED living-area common-toilet)
+        (CONNECTED living-area board-game-room)
     )
 )
