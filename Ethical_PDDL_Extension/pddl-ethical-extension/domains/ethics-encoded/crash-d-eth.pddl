@@ -1,5 +1,5 @@
 (define (domain crash-d-eth)
-    ( :requirements :strips :typing :equality :negative-preconditions :conditional-effects) :ethical)
+    ( :requirements :strips :typing :equality :negative-preconditions :conditional-effects :ethical)
 
     ( :types
         car xPos yPos direction gravity - object
