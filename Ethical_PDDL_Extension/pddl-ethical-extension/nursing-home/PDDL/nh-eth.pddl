@@ -1,15 +1,10 @@
-(define (problem crash-eth)
-    (:domain crash-d-eth)
+(define (problem nh-eth)
+    (:domain nh-d-eth)
      ( :objects
-        ; two cars in total
-        c1 c2 - car
-        ; the floorplan is as drawn below
-        ;               (forward/backward)
-        ; x1y4 x2y4     |
-        ; x1y3 x2y3     |
-        ; x1y2 x2y2     |    
-        ; x1y1 x2y1     |_ _ (left/right)
-        x1 x2 - xPos
+        p1 p2 - person
+        key knives alcohol lighter cigarettes medication - item
+        oily sweet salty - flavour
+        x1 x2 x3 x4 - xPos
         y1 y2 y3 y4 - yPos
     )
     ( :init
