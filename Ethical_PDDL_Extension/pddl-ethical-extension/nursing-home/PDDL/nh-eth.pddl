@@ -8,28 +8,24 @@
         y1 y2 y3 y4 - yPos
     )
     ( :init
+        ; ready to set the initial state....
+        ; including what position would moving along a direction result in
         ( updated )
 
-        ( hasPos agent x1 y1 )
-        ( hasPos c1 x2 y1 )
-        ( hasPos c2 x2 y3 )
 
-        ( hasDir agent straight )
-        ( hasDir c1 straight )
+        ( hasPosPerson ?P - person ?X1 - xPos ?Y1 - yPos )
+        ( hasPosRobot ?R - robot ?X1 - xPos ?Y1 - yPos )
+        ( hasDir ?R - robot ?D - direction )
+        ( hasHeartProblem ?P1 - person )
+        ( hasDiabetes ?P1 - person )
+        ( hasHighBloodPressure ?P1 - person )
 
-        ( nextX straight x1 x1 )
-        ( nextX straight x2 x2 )
-        ( nextX right x1 x2 )
-        ( nextX right x2 x2 )
-        ( nextX left x1 x1 )
-        ( nextX left x2 x1 )
+        ( isNotChef ?P1 - person )
+        ( isResident ?P1 - person )
 
-        ( nextY y1 y2 )
-        ( nextY y2 y3 )
-        ( nextY y3 y4 )
-
-
-        ( nextY y4 y4 )
+        ; robot moving directions and resulting positions
+        ( nextX ?D - direction ?X1 - xPos ?X2 - xPos )
+        ( nextY ?D - direction ?Y1 - yPos ?Y2 - yPos )
     )
 
     ( :goal

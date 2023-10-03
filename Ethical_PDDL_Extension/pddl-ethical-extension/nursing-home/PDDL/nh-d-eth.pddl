@@ -11,7 +11,8 @@
     )
 
     ( :predicates
-        ( hasPos ?P - person ?X1 - xPos ?Y1 - yPos )
+        ( hasPosPerson ?P - person ?X1 - xPos ?Y1 - yPos )
+        ( hasPosRobot ?R - robot ?X1 - xPos ?Y1 - yPos )
         ( hasDir ?R - robot ?D - direction )
         ( hasHeartProblem ?P1 - person )
         ( hasDiabetes ?P1 - person )
@@ -24,7 +25,7 @@
         ( nextX ?D - direction ?X1 - xPos ?X2 - xPos )
         ( nextY ?D - direction ?Y1 - yPos ?Y2 - yPos )
 
-        ( uodated )
+        ( updated )
 
     )
 
