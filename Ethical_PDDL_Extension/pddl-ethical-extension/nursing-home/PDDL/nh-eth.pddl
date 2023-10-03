@@ -24,8 +24,20 @@
         ( isResident ?P1 - person )
 
         ; robot moving directions and resulting positions
-        ( nextX ?D - direction ?X1 - xPos ?X2 - xPos )
-        ( nextY ?D - direction ?Y1 - yPos ?Y2 - yPos )
+        ( nextX left x4 x3 )
+        ( nextX left x3 x2 )
+        ( nextX left x2 x1 )
+        ( nextX right x1 x2 )
+        ( nextX right x2 x3 )
+        ( nextX right x3 x4 )
+        
+        ( nextY backward y4 y3 )
+        ( nextY backward y3 y2 )
+        ( nextY backward y2 y1 )
+        ( nextY forward y1 y2 )
+        ( nextY forward y2 y3 )
+        ( nextY forward y3 y4 )
+
     )
 
     ( :goal
