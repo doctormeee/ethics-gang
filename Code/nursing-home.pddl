@@ -22,30 +22,36 @@
         depression-pills
         puffer
         panadol
+        medical-record-ben medical-record-emma medical-record-mohammed 
 
         ; Clothing
-        underwear-ben underwear-emma underwear-mohammed ; arises privacy issues - when partners request for their underwear it is fine,,,?
+        underwear-ben underwear-emma underwear-mohammed ; arises privacy issues - when partners request for their underwear it is fine...?
         glasses-ben glasses-emma glasses-mohammed ; In the specs, ben and mohammed wears glasses and it says emma requests for he glasses often
         ; other clothings - maybe mohammed likes to wear a hat, people might request to jackets when they're cold
         
+        ; Personal and Communal Items
         journal-ben journal-emma journal-mohammed ; Assumed all residents have a journal each
-        wallet-ben wallet-emma wallet-mohammed wallet-sophia wallet-mark ; Assumed all described personas have a wallet each
-        medical-record-ben medical-record-emma medical-record-mohammed 
+        wallet-ben wallet-emma wallet-mohammed wallet-sophia wallet-mark ; Assumed all personas have a wallet each
         photo-album
-        key-pharmacy ; but there's no pharmacy rooms lol - good idea to add keys
+        toiletry ; wondering if this should be communal or resident-separated
+        phone-ben phone-emma phone-mohammed phone-sophia phone-mark
+        radio
+
+        ; Keys
+        key-pharmacy
         key-room1
         key-room2
         key-cabinet
 
-        toiletry ; wondering if this should be communal or resident-separated
-        phone-ben phone-emma phone-mohammed phone-sophia phone-mark
-        radio
+        ; Hazardous Items
         knife ; should add other weapons
         lighter
         alcohol
-        peanuts shrimp food sweets ; elaboration needed
         fire-extinguisher
         cigarette ; to bully mohammed
+
+        ; Food
+        peanuts shrimp food sweets ; elaboration needed
         
         ; People
         ; Staff nurses
