@@ -1,0 +1,22 @@
+
+; Version LPG-td-1.4
+; Seed 114580771
+; Command line: ./lpg-td -o domain.pddl -f p.pddl -n 1 
+; Problem p.pddl
+; Time 0.01
+; Search time 0.01
+; Parsing time 0.00
+; Mutex time 0.00
+; MetricValue 9.00
+
+5.0002:   (LAND P1 RW1) [2.0000]
+7.0005:   (TAXI-TO-GATE P1 G1) [5.0000]
+12.0007:   (DISEMBARK P1) [7.0000]
+19.0010:   (CLEANING P1 CL1) [5.0000]
+24.0013:   (BOARDING P1) [15.0000]
+39.0015:   (PUSH-BACK P1 G1) [3.0000]
+42.0018:   (TAXI-TO-RUNWAY P1 RW1) [5.0000]
+47.0020:   (NO-DE-ICING_NEEDED P1 RW1) [0.0000]
+50.0003:   (TAKE-OFF P1 RW1) [2.0000]
+
+
