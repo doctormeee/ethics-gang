@@ -82,6 +82,11 @@
     ;     )
     ; )
 
+    ; move withn a room, from one waypoint to another
+    ; like if the robot is at WP_LIVINGROOM_FROM_KITCHEN, meaning it just went through the 
+    ; door between kitchen and living room and is currently in the living room.
+    ; if it wants to move from living room to the bathroom. it needs to make its way to WP_LIVINGROOM_TO_BATHROOM
+    ; "move" moves the robot from WP_LIVINGROOM_FROM_KITCHEN to WP_LIVINGROOM_TO_BATHROOM
     (:durative-action move
         :parameters (?r - robot ?from ?to - waypoint ?room - room)
         :duration ( = ?duration 10)
