@@ -1,0 +1,15 @@
+/.DS_Store
+run.txt
+domains/full
+domains/old
+/planners
+/plans
+/transpiled
+/benchmarks
+/transpiler_benchmarks
+/transpiled_pref
+/transpiler_benchmarks_preferences
+out-final
+out-tmp
+/out-lprpgp
+/lprpgp-mine

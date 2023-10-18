@@ -1,0 +1,1 @@
+﻿# ethics gang private (sorta kinda) repo YAYLog:
