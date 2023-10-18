@@ -1,7 +1,7 @@
 
 ; Version LPG-td-1.4
-; Seed 66272967
-; Command line: ./lpg-td -o waypoints-d.pddl -f waypoints-p.pddl -n 1 
+; Seed 57895364
+; Command line: ./lpg-td -o waypoints-d.pddl -f waypoints-p.pddl -n 2 
 ; Problem waypoints-p.pddl
 ; Time 0.01
 ; Search time 0.01
