@@ -98,11 +98,11 @@
 
 
 
-  (waypoint_at wp_Balcony Balcony)
-  (waypoint_at wp_Kitchen Kitchen)
-  (waypoint_at wp_LivingRoom LivingRoom)
-  (waypoint_at wp_Bathroom Bathroom)
-  (waypoint_at wp_DiningRoom DiningRoom)
+  ; (waypoint_at wp_Balcony Balcony)
+  ; (waypoint_at wp_Kitchen Kitchen)
+  ; (waypoint_at wp_LivingRoom LivingRoom)
+  ; (waypoint_at wp_Bathroom Bathroom)
+  ; (waypoint_at wp_DiningRoom DiningRoom)
 
   )
   (:goal (and
