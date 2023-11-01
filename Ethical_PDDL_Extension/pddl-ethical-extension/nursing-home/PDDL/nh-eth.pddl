@@ -51,8 +51,8 @@
     ( :goal
         (and
         ( updated )
-        ( hasPos agent x2 y4 )
-        (not ( hasCrashed agent ) ) )
+        (satisfied-care patient1)
+        (satisfied-care patient2)
     )
 )
 

@@ -25,6 +25,9 @@
         ( nextX ?D - direction ?X1 - xPos ?X2 - xPos )
         ( nextY ?D - direction ?Y1 - yPos ?Y2 - yPos )
 
+        (provides-care ?R - robot ?P1 - person)
+        (satisfied-care ?P1 - person)
+
         ( updated )
 
     )
@@ -113,6 +116,13 @@
                 ( hasPos ?C1 ?X2 ?Y2 ) ) ) )
             )
         )
+
+    (:action provide-care
+    :parameters (?R - robot ?p1 - person)
+    :precondition (provides-care ?R ?P1)
+    :effect (satisfied-care ?P1)
+            
+    )
 
     (:ethical-features
         ( danger ?P1 - person ?I1 - item )
