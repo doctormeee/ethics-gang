@@ -1,10 +1,11 @@
-(define (domain waypoints-d-eth)
+(define (domain waypoints-d)
     ; ( :requirements :strips :typing :fluents) ; :equality :negative-preconditions :conditional-effects); :ethical)
 
     ; (:requirements :strips :fluents :typing) ;:durative-actions :timed-initial-literals :typing :negative-preconditions :duration-inequalities)
     ; (:requirements :strips :fluents :durative-actions :timed-initial-literals :typing :negative-preconditions :duration-inequalities :ethical)
     ; (:requirements :strips :typing :negative-preconditions :ethical)
     ( :requirements :strips :typing :equality :negative-preconditions :conditional-effects :ethical)
+    ; ( :requirements :strips :typing :equality :negative-preconditions :conditional-effects)
 
     ( :types
         ; robot direction person item flavour xPos yPos - object
@@ -115,12 +116,12 @@
         :type -
         :rank 1
     )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment DiningRoom )
-        :type -
-        :rank 2
-    )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment DiningRoom )
+    ;     :type -
+    ;     :rank 2
+    ; )
     ( :ethical-rule privacyRule
         :parameters (?r - robot ?room - room)
         :precondition ( and 

@@ -1,10 +1,11 @@
-(define (domain waypoints-d-eth)
+(define (domain waypoints-d)
     ; ( :requirements :strips :typing :fluents) ; :equality :negative-preconditions :conditional-effects); :ethical)
 
     ; (:requirements :strips :fluents :typing) ;:durative-actions :timed-initial-literals :typing :negative-preconditions :duration-inequalities)
     ; (:requirements :strips :fluents :durative-actions :timed-initial-literals :typing :negative-preconditions :duration-inequalities :ethical)
     ; (:requirements :strips :typing :negative-preconditions :ethical)
-    ( :requirements :strips :typing :equality :negative-preconditions :conditional-effects :ethical)
+    ; ( :requirements :strips :typing :equality :negative-preconditions :conditional-effects :ethical)
+    ( :requirements :strips :typing :equality :negative-preconditions :conditional-effects)
 
     ( :types
         ; robot direction person item flavour xPos yPos - object
@@ -68,65 +69,65 @@
     ; door between kitchen and living room and is currently in the living room.
     ; if it wants to move from living room to the bathroom. it needs to make its way to WP_LIVINGROOM_TO_BATHROOM
     ; "move" moves the robot from WP_LIVINGROOM_FROM_KITCHEN to WP_LIVINGROOM_TO_BATHROOM
-    (:action move
-        :parameters (?r - robot ?from ?to - waypoint ?room - room)
-        :precondition (and
-            (waypoint_at ?from ?room)
-            (waypoint_at ?to ?room)
-            (robot_at_room ?r ?room)
-            (robot_at ?r ?from)
-        )
-        :effect (and
-        (not(robot_at ?r ?from))
-        (robot_at ?r ?to)
-        )
-    )
+    ; (:action move
+    ;     :parameters (?r - robot ?from ?to - waypoint ?room - room)
+    ;     :precondition (and
+    ;         (waypoint_at ?from ?room)
+    ;         (waypoint_at ?to ?room)
+    ;         (robot_at_room ?r ?room)
+    ;         (robot_at ?r ?from)
+    ;     )
+    ;     :effect (and
+    ;     (not(robot_at ?r ?from))
+    ;     (robot_at ?r ?to)
+    ;     )
+    ; )
 
-    (:ethical-features
-        ( PrivacyBreachment ?room - room )
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Bedroom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Balcony )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment LivingRoom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Bathroom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Kitchen )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment DiningRoom )
-        :type -
-        :rank 2
-    )
-    ( :ethical-rule privacyRule
-        :parameters (?r - robot ?room - room)
-        :precondition ( and 
-        (robot_at_room ?r ?room)
-        )
-        :activation null
-        :features ( PrivacyBreachment ?room )
-    )
+    ; (:ethical-features
+    ;     ( PrivacyBreachment ?room - room )
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Bedroom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Balcony )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment LivingRoom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Bathroom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Kitchen )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ; ( :ethical-rank
+    ; ;     :feature
+    ; ;     ( PrivacyBreachment DiningRoom )
+    ; ;     :type -
+    ; ;     :rank 2
+    ; ; )
+    ; ( :ethical-rule privacyRule
+    ;     :parameters (?r - robot ?room - room)
+    ;     :precondition ( and 
+    ;     (robot_at_room ?r ?room)
+    ;     )
+    ;     :activation null
+    ;     :features ( PrivacyBreachment ?room )
+    ; )
 )
