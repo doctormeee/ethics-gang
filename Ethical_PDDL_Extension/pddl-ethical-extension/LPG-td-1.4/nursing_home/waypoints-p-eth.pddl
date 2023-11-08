@@ -89,23 +89,15 @@
   (:init
   ; define intial state
 
-  (door_connected Bathroom_to_LivingRoom Bathroom LivingRoom wp_Bathroom_to_LivingRoom wp_LivingRoom_from_Bathroom)
-  (door_connected LivingRoom_to_Bathroom LivingRoom Bathroom wp_LivingRoom_to_Bathroom wp_Bathroom_from_LivingRoom)
+  (door_connected StaffRoom_to_SharedReceptionSpace StaffRoom SharedReceptionSpace wp_StaffRoom_to_SharedReceptionSpace wp_SharedReceptionSpace_from_StaffRoom)
+  (door_connected SharedReceptionSpace_to_StaffRoom SharedReceptionSpace StaffRoom wp_SharedReceptionSpace_to_StaffRoom wp_StaffRoom_from_SharedReceptionSpace)
 
-  (door_connected Kitchen_to_LivingRoom Kitchen LivingRoom wp_Kitchen_to_LivingRoom wp_LivingRoom_from_Kitchen)
-  (door_connected LivingRoom_to_Kitchen LivingRoom Kitchen wp_LivingRoom_to_Kitchen wp_Kitchen_from_LivingRoom)
+  (door_connected SharedReceptionSpace_to_Corridor1 SharedReceptionSpace SharedReceptionSpace wp_StaffRoom_to_SharedReceptionSpace wp_SharedReceptionSpace_from_StaffRoom)
+  (door_connected Corridor1_to_SharedReceptionSpace SharedReceptionSpace StaffRoom wp_SharedReceptionSpace_to_StaffRoom wp_StaffRoom_from_SharedReceptionSpace)
 
-  (door_connected Kitchen_to_Balcony Kitchen Balcony wp_Kitchen_to_Balcony wp_Balcony_from_Kitchen)
-  (door_connected Balcony_to_Kitchen Balcony Kitchen wp_Balcony_to_Kitchen wp_Kitchen_from_Balcony)
 
-  (door_connected DiningRoom_to_LivingRoom DiningRoom LivingRoom wp_DiningRoom_to_LivingRoom wp_LivingRoom_from_DiningRoom)
-  (door_connected LivingRoom_to_DiningRoom LivingRoom DiningRoom wp_LivingRoom_to_DiningRoom wp_DiningRoom_from_LivingRoom)
 
-  (door_connected DiningRoom_to_Balcony DiningRoom Balcony wp_DiningRoom_to_Balcony wp_Balcony_from_DiningRoom)
-  (door_connected Balcony_to_DiningRoom Balcony DiningRoom wp_Balcony_to_DiningRoom wp_DiningRoom_from_Balcony)
 
-  (door_connected Bedroom_to_Balcony Bedroom Balcony wp_Bedroom_to_Balcony wp_Balcony_from_Bedroom)
-  (door_connected Balcony_to_Bedroom Balcony Bedroom wp_Balcony_to_Bedroom wp_Bedroom_from_Balcony)
 
 
   (door_opened Bathroom_to_LivingRoom)
