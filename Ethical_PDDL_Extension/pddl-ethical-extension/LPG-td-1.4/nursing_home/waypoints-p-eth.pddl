@@ -50,7 +50,7 @@
     wp_Room3_to_LivingSpace wp_LivingSpace_to_Room3 - waypoint
     wp_Room4_to_LivingSpace wp_LivingSpace_to_Room4 - waypoint
 
-    wp_Room5_to_Corridor2 Cwp_orridor2_to_Room5 - waypoint
+    wp_Room5_to_Corridor2 wp_Corridor2_to_Room5 - waypoint
     wp_Room6_to_Corridor2 wp_Corridor2_to_Room6 - waypoint
     wp_Room9_to_Corridor2 wp_Corridor2_to_Room9 - waypoint
     wp_Room10_to_Corridor2 wp_Corridor2_to_Room10 - waypoint
@@ -75,7 +75,7 @@
     wp_Room3_from_LivingSpace wp_LivingSpace_from_Room3 - waypoint
     wp_Room4_from_LivingSpace wp_LivingSpace_from_Room4 - waypoint
 
-    wp_Room5_from_Corridor2 Cwp_orridor2_from_Room5 - waypoint
+    wp_Room5_from_Corridor2 wp_Corridor2_from_Room5 - waypoint
     wp_Room6_from_Corridor2 wp_Corridor2_from_Room6 - waypoint
     wp_Room9_from_Corridor2 wp_Corridor2_from_Room9 - waypoint
     wp_Room10_from_Corridor2 wp_Corridor2_from_Room10 - waypoint
@@ -94,6 +94,58 @@
 
   (door_connected SharedReceptionSpace_to_Corridor1 SharedReceptionSpace SharedReceptionSpace wp_StaffRoom_to_SharedReceptionSpace wp_SharedReceptionSpace_from_StaffRoom)
   (door_connected Corridor1_to_SharedReceptionSpace SharedReceptionSpace StaffRoom wp_SharedReceptionSpace_to_StaffRoom wp_StaffRoom_from_SharedReceptionSpace)
+
+  (door_connected Corridor1_to_LivingSpace Corridor1 LivingSpace wp_Corridor1_to_LivingSpace wp_LivingSpace_from_Corridor1)
+  (door_connected LivingSpace_to_Corridor1 LivingSpace Corridor1 wp_LivingSpace_to_Corridor1 wp_Corridor1_from_LivingSpace)
+
+  (door_connected Corridor1_to_LivingSpace Corridor1 LivingSpace wp_Corridor1_to_LivingSpace wp_LivingSpace_from_Corridor1)
+  (door_connected LivingSpace_to_Corridor1 LivingSpace Corridor1 wp_LivingSpace_to_Corridor1 wp_Corridor1_from_LivingSpace)
+
+  (door_connected Corridor2_to_LivingSpace Corridor2 LivingSpace wp_Corridor2_to_LivingSpace wp_LivingSpace_from_Corridor2)
+  (door_connected LivingSpace_to_Corridor2 LivingSpace Corridor2 wp_LivingSpace_to_Corridor2 wp_Corridor2_from_LivingSpace)
+
+  (door_connected Corridor2_to_DiningRoom Corridor2 DiningRoom wp_Corridor2_to_DiningRoom wp_DiningRoom_from_Corridor2)
+  (door_connected DiningRoom_to_Corridor2 DiningRoom Corridor2 wp_DiningRoom_to_Corridor2 wp_Corridor2_from_DiningRoom)
+
+  (door_connected Kitchen_to_DiningRoom Kitchen DiningRoom wp_Kitchen_to_DiningRoom wp_DiningRoom_from_Kitchen)
+  (door_connected DiningRoom_to_Kitchen DiningRoom Kitchen wp_DiningRoom_to_Kitchen wp_Kitchen_from_DiningRoom)
+
+
+
+  (door_connected Corridor1_to_Room1 Corridor1 Room1 wp_Corridor1_to_Room1 wp_Room1_from_Corridor1)
+  (door_connected Room1_to_Corridor1 Room1 Corridor1 wp_Room1_to_Corridor1 wp_Corridor1_from_Room1)
+
+  (door_connected Corridor1_to_Room2 Corridor1 Room2 wp_Corridor1_to_Room2 wp_Room2_from_Corridor1)
+  (door_connected Room2_to_Corridor1 Room2 Corridor1 wp_Room2_to_Corridor1 wp_Corridor1_from_Room2)
+
+  (door_connected Corridor1_to_Room7 Corridor1 Room7 wp_Corridor1_to_Room7 wp_Room7_from_Corridor1)
+  (door_connected Room7_to_Corridor1 Room7 Corridor1 wp_Room7_to_Corridor1 wp_Corridor1_from_Room7)
+
+  (door_connected Corridor1_to_Room8 Corridor1 Room8 wp_Corridor1_to_Room8 wp_Room8_from_Corridor1)
+  (door_connected Room8_to_Corridor1 Room8 Corridor1 wp_Room8_to_Corridor1 wp_Corridor1_from_Room8)
+
+
+  (door_connected LivingSpace_to_Room3 LivingSpace Room3 wp_LivingSpace_to_Room3 wp_Room3_from_LivingSpace)
+  (door_connected Room3_to_LivingSpace Room3 LivingSpace wp_Room3_to_LivingSpace wp_LivingSpace_from_Room3)
+
+  (door_connected LivingSpace_to_Room4 LivingSpace Room4 wp_LivingSpace_to_Room4 wp_Room4_from_LivingSpace)
+  (door_connected Room4_to_LivingSpace Room4 LivingSpace wp_Room4_to_LivingSpace wp_LivingSpace_from_Room4)
+
+
+
+  (door_connected Corridor2_to_Room5 Corridor2 Room5 wp_Corridor2_to_Room5 wp_Room5_from_Corridor2)
+  (door_connected Room5_to_Corridor2 Room5 Corridor2 wp_Room5_to_Corridor2 wp_Corridor2_from_Room5)
+
+  (door_connected Corridor2_to_Room6 Corridor2 Room6 wp_Corridor2_to_Room6 wp_Room6_from_Corridor2)
+  (door_connected Room6_to_Corridor2 Room6 Corridor2 wp_Room6_to_Corridor2 wp_Corridor2_from_Room6)
+
+  (door_connected Corridor2_to_Room9 Corridor2 Room9 wp_Corridor2_to_Room9 wp_Room9_from_Corridor2)
+  (door_connected Room9_to_Corridor2 Room9 Corridor2 wp_Room9_to_Corridor2 wp_Corridor2_from_Room9)
+
+  (door_connected Corridor2_to_Room10 Corridor2 Room10 wp_Corridor2_to_Room10 wp_Room10_from_Corridor2)
+  (door_connected Room10_to_Corridor2 Room10 Corridor2 wp_Room10_to_Corridor2 wp_Corridor2_from_Room10)
+
+
 
 
 
