@@ -110,8 +110,6 @@
   (door_connected Kitchen_to_DiningRoom Kitchen DiningRoom wp_Kitchen_to_DiningRoom wp_DiningRoom_from_Kitchen)
   (door_connected DiningRoom_to_Kitchen DiningRoom Kitchen wp_DiningRoom_to_Kitchen wp_Kitchen_from_DiningRoom)
 
-
-
   (door_connected Corridor1_to_Room1 Corridor1 Room1 wp_Corridor1_to_Room1 wp_Room1_from_Corridor1)
   (door_connected Room1_to_Corridor1 Room1 Corridor1 wp_Room1_to_Corridor1 wp_Corridor1_from_Room1)
 
@@ -124,13 +122,11 @@
   (door_connected Corridor1_to_Room8 Corridor1 Room8 wp_Corridor1_to_Room8 wp_Room8_from_Corridor1)
   (door_connected Room8_to_Corridor1 Room8 Corridor1 wp_Room8_to_Corridor1 wp_Corridor1_from_Room8)
 
-
   (door_connected LivingSpace_to_Room3 LivingSpace Room3 wp_LivingSpace_to_Room3 wp_Room3_from_LivingSpace)
   (door_connected Room3_to_LivingSpace Room3 LivingSpace wp_Room3_to_LivingSpace wp_LivingSpace_from_Room3)
 
   (door_connected LivingSpace_to_Room4 LivingSpace Room4 wp_LivingSpace_to_Room4 wp_Room4_from_LivingSpace)
   (door_connected Room4_to_LivingSpace Room4 LivingSpace wp_Room4_to_LivingSpace wp_LivingSpace_from_Room4)
-
 
 
   (door_connected Corridor2_to_Room5 Corridor2 Room5 wp_Corridor2_to_Room5 wp_Room5_from_Corridor2)
@@ -147,26 +143,57 @@
 
 
 
+  (door_opened StaffRoom_to_SharedReceptionSpace)
+  (door_opened SharedReceptionSpace_to_StaffRoom)
+
+  (door_opened SharedReceptionSpace_to_Corridor1)
+  (door_opened Corridor1_to_SharedReceptionSpace)
+
+  (door_opened Corridor1_to_LivingSpace)
+  (door_opened LivingSpace_to_Corridor1)
+
+  (door_opened Corridor2_to_LivingSpace)
+  (door_opened LivingSpace_to_Corridor2)
+
+  (door_opened Room1_to_Corridor1)
+  (door_opened Corridor1_to_Room1)
+
+  (door_opened Room2_to_Corridor1)
+  (door_opened Corridor1_to_Room2)
+
+  (door_opened Room7_to_Corridor1)
+  (door_opened Corridor1_to_Room7)
+
+  (door_opened Room8_to_Corridor1)
+  (door_opened Corridor1_to_Room8)
+
+  (door_opened Room3_to_LivingSpace)
+  (door_opened LivingSpace_to_Room3)
+
+  (door_opened Room4_to_LivingSpace)
+  (door_opened LivingSpace_to_Room4)
 
 
 
+  (door_opened Room5_to_Corridor2)
+  (door_opened Corridor2_to_Room5)
+
+  (door_opened Room6_to_Corridor2)
+  (door_opened Corridor2_to_Room6)
+
+  (door_opened Room9_to_Corridor2)
+  (door_opened Corridor2_to_Room9)
+
+  (door_opened Room10_to_Corridor2)
+  (door_opened Corridor2_to_Room10)
+
+  (door_opened Corridor2_to_DiningRoom)
+  (door_opened DiningRoom_to_Corridor2)
+
+  (door_opened Kitchen_to_DiningRoom)
+  (door_opened DiningRoom_to_Kitchen)
 
 
-  (door_opened Bathroom_to_LivingRoom)
-  (door_opened LivingRoom_to_Bathroom)
-
-  (door_opened Kitchen_to_LivingRoom)
-  (door_opened LivingRoom_to_Kitchen)
-  (door_opened Kitchen_to_Balcony)
-  (door_opened Balcony_to_Kitchen)
-
-  (door_opened DiningRoom_to_LivingRoom)
-  (door_opened LivingRoom_to_DiningRoom)
-  (door_opened DiningRoom_to_Balcony)
-  (door_opened Balcony_to_DiningRoom)
-
-  (door_opened Bedroom_to_Balcony)
-  (door_opened Balcony_to_Bedroom)
   
   (robot_at leia wp_Bedroom_to_Balcony)
   (robot_at_room leia Bedroom)
