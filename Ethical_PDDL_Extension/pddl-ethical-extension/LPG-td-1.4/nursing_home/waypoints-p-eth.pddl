@@ -195,59 +195,119 @@
 
 
   
-  (robot_at leia wp_Bedroom_to_Balcony)
-  (robot_at_room leia Bedroom)
-
-  ; (robot_at leia wp_LivingRoom_to_Bathroom)
-  ; (robot_at_room leia LivingRoom)
-
-
-  (waypoint_at wp_Bathroom_to_LivingRoom Bathroom)
-  (waypoint_at wp_LivingRoom_to_Bathroom LivingRoom)
-
-  (waypoint_at wp_Kitchen_to_LivingRoom Kitchen)
-  (waypoint_at wp_LivingRoom_to_Kitchen LivingRoom)
-  (waypoint_at wp_Kitchen_to_Balcony Kitchen)
-  (waypoint_at wp_Balcony_to_Kitchen Balcony)
-
-  (waypoint_at wp_DiningRoom_to_LivingRoom DiningRoom)
-  (waypoint_at wp_LivingRoom_to_DiningRoom LivingRoom)
-  (waypoint_at wp_DiningRoom_to_Balcony DiningRoom)
-  (waypoint_at wp_Balcony_to_DiningRoom Balcony)
-
-  (waypoint_at wp_Bedroom_to_Balcony Bedroom)
-  (waypoint_at wp_Balcony_to_Bedroom Balcony)
-
-
-  (waypoint_at wp_Bathroom_from_LivingRoom Bathroom)
-  (waypoint_at wp_LivingRoom_from_Bathroom LivingRoom)
-
-  (waypoint_at wp_Kitchen_from_LivingRoom Kitchen)
-  (waypoint_at wp_LivingRoom_from_Kitchen LivingRoom)
-  (waypoint_at wp_Kitchen_from_Balcony Kitchen)
-  (waypoint_at wp_Balcony_from_Kitchen Balcony)
-
-  (waypoint_at wp_DiningRoom_from_LivingRoom DiningRoom)
-  (waypoint_at wp_LivingRoom_from_DiningRoom LivingRoom)
-  (waypoint_at wp_DiningRoom_from_Balcony DiningRoom)
-  (waypoint_at wp_Balcony_from_DiningRoom Balcony)
-
-  (waypoint_at wp_Bedroom_from_Balcony Bedroom)
-  (waypoint_at wp_Balcony_from_Bedroom Balcony)
+  (robot_at leia wp_LivingSpace_to_Corridor1)
+  (robot_at_room leia LivingSpace)
 
 
 
-  ; (waypoint_at wp_Balcony Balcony)
-  ; (waypoint_at wp_Kitchen Kitchen)
-  ; (waypoint_at wp_LivingRoom LivingRoom)
-  ; (waypoint_at wp_Bathroom Bathroom)
-  ; (waypoint_at wp_DiningRoom DiningRoom)
+  (waypoint_at wp_StaffRoom_to_SharedReceptionSpace StaffRoom)
+  (waypoint_at wp_StaffRoom_from_SharedReceptionSpace StaffRoom)
+
+  (waypoint_at wp_SharedReceptionSpace_to_StaffRoom SharedReceptionSpace)
+  (waypoint_at wp_SharedReceptionSpace_from_StaffRoom SharedReceptionSpace)
+
+  (waypoint_at wp_SharedReceptionSpace_to_Corridor1 SharedReceptionSpace)
+  (waypoint_at wp_SharedReceptionSpace_from_Corridor1 SharedReceptionSpace)
+
+  (waypoint_at wp_Corridor1_to_SharedReceptionSpace Corridor1)
+  (waypoint_at wp_Corridor1_from_SharedReceptionSpace Corridor1)
+
+  (waypoint_at wp_Corridor1_to_LivingSpace Corridor1)
+  (waypoint_at wp_Corridor1_from_LivingSpace Corridor1)
+
+  (waypoint_at wp_LivingSpace_to_Corridor1 LivingSpace)
+  (waypoint_at wp_LivingSpace_from_Corridor1 LivingSpace)
+
+  (waypoint_at wp_Corridor2_to_LivingSpace Corridor2)
+  (waypoint_at wp_Corridor2_from_LivingSpace Corridor2)
+
+  (waypoint_at wp_LivingSpace_to_Corridor2 LivingSpace)
+  (waypoint_at wp_LivingSpace_from_Corridor2 LivingSpace)
+
+  
+  (waypoint_at wp_Room1_to_Corridor1 Room1)
+  (waypoint_at wp_Room1_from_Corridor1 Room1)
+
+  (waypoint_at wp_Corridor1_to_Room1 Corridor1)
+  (waypoint_at wp_Corridor1_from_Room1 Corridor1)
+  
+  (waypoint_at wp_Room2_to_Corridor1 Room2)
+  (waypoint_at wp_Room2_from_Corridor1 Room2)
+
+  (waypoint_at wp_Corridor1_to_Room2 Corridor1)
+  (waypoint_at wp_Corridor1_from_Room2 Corridor1)
+  
+  (waypoint_at wp_Room7_to_Corridor1 Room7)
+  (waypoint_at wp_Room7_from_Corridor1 Room7)
+
+  (waypoint_at wp_Corridor1_to_Room7 Corridor1)
+  (waypoint_at wp_Corridor1_from_Room7 Corridor1)
+
+  (waypoint_at wp_Room8_to_Corridor1 Room8)
+  (waypoint_at wp_Room8_from_Corridor1 Room8)
+
+  (waypoint_at wp_Corridor1_to_Room8 Corridor1)
+  (waypoint_at wp_Corridor1_from_Room8 Corridor1)
+
+
+
+  (waypoint_at wp_Room3_to_LivingSpace Room3)
+  (waypoint_at wp_Room3_from_LivingSpace Room3)
+
+  (waypoint_at wp_LivingSpace_to_Room3 LivingSpace)
+  (waypoint_at wp_LivingSpace_from_Room3 LivingSpace)
+
+  (waypoint_at wp_Room4_to_LivingSpace Room4)
+  (waypoint_at wp_Room4_from_LivingSpace Room4)
+
+  (waypoint_at wp_LivingSpace_to_Room4 LivingSpace)
+  (waypoint_at wp_LivingSpace_from_Room4 LivingSpace)
+
+
+  (waypoint_at wp_Room5_to_Corridor2 Room5)
+  (waypoint_at wp_Room5_from_Corridor2 Room5)
+
+  (waypoint_at wp_Corridor2_to_Room5 Corridor2)
+  (waypoint_at wp_Corridor2_from_Room5 Corridor2)
+  
+  (waypoint_at wp_Room6_to_Corridor2 Room6)
+  (waypoint_at wp_Room6_from_Corridor2 Room6)
+
+  (waypoint_at wp_Corridor2_to_Room6 Corridor2)
+  (waypoint_at wp_Corridor2_from_Room6 Corridor2)
+
+  (waypoint_at wp_Room9_to_Corridor2 Room9)
+  (waypoint_at wp_Room9_from_Corridor2 Room9)
+
+  (waypoint_at wp_Corridor2_to_Room9 Corridor2)
+  (waypoint_at wp_Corridor2_from_Room9 Corridor2)
+  
+  (waypoint_at wp_Room10_to_Corridor2 Room10)
+  (waypoint_at wp_Room10_from_Corridor2 Room10)
+
+  (waypoint_at wp_Corridor2_to_Room10 Corridor2)
+  (waypoint_at wp_Corridor2_from_Room10 Corridor2)
+
+
+
+  (waypoint_at wp_Corridor2_to_DiningRoom Corridor2)
+  (waypoint_at wp_Corridor2_from_DiningRoom Corridor2)
+
+  (waypoint_at wp_DiningRoom_to_Corridor2 DiningRoom)
+  (waypoint_at wp_DiningRoom_from_Corridor2 DiningRoom)
+
+  (waypoint_at wp_Kitchen_to_DiningRoom Kitchen)
+  (waypoint_at wp_Kitchen_from_DiningRoom Kitchen)
+
+  (waypoint_at wp_DiningRoom_to_Kitchen DiningRoom)
+  (waypoint_at wp_DiningRoom_from_Kitchen DiningRoom)
+
+
 
   )
   (:goal (and
       ; goal state
-      (robot_at_room leia Bathroom)
-      ; (robot_at_room leia LivingRoom)
+      (robot_at_room leia Kitchen)
     )
   )
 )
