@@ -79,51 +79,51 @@
         )
     )
 
-    (:ethical-features
-        ( PrivacyBreachment ?room - room )
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Bedroom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Balcony )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment LivingRoom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Bathroom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Kitchen )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment DiningRoom )
-        :type -
-        :rank 2
-    )
-    ( :ethical-rule privacyRule
-        :parameters (?r - robot ?room - room)
-        :precondition ( and 
-        (robot_at_room ?r ?room)
-        )
-        :activation null
-        :features ( PrivacyBreachment ?room )
-    )
+    ; (:ethical-features
+    ;     ( PrivacyBreachment ?room - room )
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Bedroom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Balcony )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment LivingRoom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Bathroom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Kitchen )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment DiningRoom )
+    ;     :type -
+    ;     :rank 2
+    ; )
+    ; ( :ethical-rule privacyRule
+    ;     :parameters (?r - robot ?room - room)
+    ;     :precondition ( and 
+    ;     (robot_at_room ?r ?room)
+    ;     )
+    ;     :activation null
+    ;     :features ( PrivacyBreachment ?room )
+    ; )
 )
