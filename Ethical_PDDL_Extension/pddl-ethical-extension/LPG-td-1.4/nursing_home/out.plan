@@ -1,0 +1,4 @@
+(cross leia livingspace corridor1 livingspace_to_corridor1 wp_livingspace_to_corridor1 wp_corridor1_from_livingspace)
+(move leia wp_corridor1_from_livingspace wp_corridor1_to_room1 corridor1)
+(cross leia corridor1 room1 corridor1_to_room1 wp_corridor1_to_room1 wp_room1_from_corridor1)
+; cost = 3 (unit cost)

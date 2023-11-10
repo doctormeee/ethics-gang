@@ -307,7 +307,7 @@
   )
   (:goal (and
       ; goal state
-      (robot_at_room leia Kitchen)
+      (robot_at_room leia Room1)
     )
   )
 )
