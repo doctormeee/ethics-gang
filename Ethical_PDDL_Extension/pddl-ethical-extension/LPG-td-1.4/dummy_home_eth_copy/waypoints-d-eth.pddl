@@ -92,12 +92,14 @@
     )
 
     (:action pick_item
-        :parameters (?r - robot ?item - item)
+        :parameters (?r - robot ?item - item ?room - room)
         :precondition (and
             (not (robot_has_item ?r ?item))
+            (item_in_room ?room ?item)
         )
         :effect (and
         (robot_has_item ?r ?item)
+        (not (item_in_room ?room ?item))
         )
     )
 
