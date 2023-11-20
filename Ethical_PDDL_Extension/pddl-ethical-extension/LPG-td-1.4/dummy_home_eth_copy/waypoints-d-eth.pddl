@@ -256,7 +256,7 @@
         (robot_has_item ?r ?item) 
         (robot_at_room ?r ?room)
         )
-        :activation null
+        :activation ( give_item ( ?r ?item ))
         :features ( SafetyBreachment ?person ?item )
     )
 
