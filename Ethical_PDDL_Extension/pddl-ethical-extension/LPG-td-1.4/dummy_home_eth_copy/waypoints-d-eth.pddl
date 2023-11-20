@@ -40,6 +40,8 @@
         ; define whether a robot is holding an item
         (robot_has_item ?r - robot ?item - item)
 
+        (content_person ?p - person)
+
         ; ( updated )
 
     )
@@ -105,9 +107,18 @@
         )
     )
 
+    (:action interact
+        :parameters (?r - robot ?person - person)
+        :precondition ()
+        :effect (and 
+        (content_person ?person)
+        )
+    )
+
     (:ethical-features
         ( PrivacyBreachment ?room - room )
         ( SafetyBreachment ?person - person ?item - item)
+        ( SocialNeed ?person - person)
     )
 
     ( :ethical-rank
@@ -192,6 +203,13 @@
         )
         :activation null
         :features ( SafetyBreachment ?person ?item )
+    )
+
+    ( :ethical-rule socialRule
+        :parameters (?r - robot ?person - person ?item - item)
+        :precondition ()
+        :activation null
+        :features ( SocialNeed ?person)
     )
 
 )
