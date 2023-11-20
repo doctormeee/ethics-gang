@@ -251,9 +251,10 @@
         :rank 8
     )
     ( :ethical-rule safetyRule
-        :parameters (?r - robot ?person - person ?item - item)
+        :parameters (?r - robot ?person - person ?item - item ?room - room)
         :precondition (and 
         (robot_has_item ?r ?item) 
+        (robot_at_room ?r ?room)
         )
         :activation null
         :features ( SafetyBreachment ?person ?item )
