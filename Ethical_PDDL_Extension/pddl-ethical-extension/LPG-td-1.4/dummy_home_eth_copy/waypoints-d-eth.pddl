@@ -250,7 +250,16 @@
         :type -
         :rank 8
     )
-    ( :ethical-rule safetyRule
+    ( :ethical-rule safetyPickRule
+        :parameters (?r - robot ?person - person ?item - item ?room - room)
+        :precondition (and 
+        (not (robot_has_item ?r ?item))
+        (robot_at_room ?r ?room)
+        )
+        :activation ( pick_item ( ?r ?item ?room ))
+        :features ( SafetyBreachment ?person ?item )
+    )
+    ( :ethical-rule safetyGiveRule
         :parameters (?r - robot ?person - person ?item - item ?room - room)
         :precondition (and 
         (robot_has_item ?r ?item) 
