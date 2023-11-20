@@ -187,6 +187,18 @@
     )
     ( :ethical-rank
         :feature
+        ( SafetyBreachment person knife )
+        :type -
+        :rank 9
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment person scissors )
+        :type -
+        :rank 9
+    )
+    ( :ethical-rank
+        :feature
         ( SafetyBreachment person nuts )
         :type -
         :rank 5
@@ -229,9 +241,9 @@
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person fish )
+        ( SafetyBreachment person wine )
         :type -
-        :rank 5
+        :rank 8
     )
     ( :ethical-rule safetyRule
         :parameters (?r - robot ?person - person ?item - item)
