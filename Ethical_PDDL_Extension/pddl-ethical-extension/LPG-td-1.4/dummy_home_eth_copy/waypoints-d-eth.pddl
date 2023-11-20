@@ -263,7 +263,7 @@
     ( :ethical-rule socialRule
         :parameters (?r - robot ?person - person ?item - item)
         :precondition ()
-        :activation null
+        :activation ( interact ( ?r ?person ))
         :features ( SocialNeed ?person)
     )
 
