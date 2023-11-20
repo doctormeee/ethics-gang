@@ -43,6 +43,9 @@
         ; define the current wellbeing of the person
         (content_person ?p - person)
 
+        ; define whether an item is in a room
+        (item_in_room ?item - item ?r - room)
+        
         ; ( updated )
 
     )

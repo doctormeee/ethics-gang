@@ -58,6 +58,7 @@
   
   (robot_at leia wp_Bedroom_to_Balcony)
   (robot_at_room leia Bedroom)
+  (robot_has_item leia knife)
 
   ; (robot_at leia wp_LivingRoom_to_Bathroom)
   ; (robot_at_room leia LivingRoom)
