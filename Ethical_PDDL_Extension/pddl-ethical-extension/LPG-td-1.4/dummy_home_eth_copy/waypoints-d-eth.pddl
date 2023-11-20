@@ -40,6 +40,7 @@
         ; define whether a robot is holding an item
         (robot_has_item ?r - robot ?item - item)
 
+        ; define the current wellbeing of the person
         (content_person ?p - person)
 
         ; ( updated )
@@ -192,9 +193,45 @@
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person clothing )
+        ( SafetyBreachment person shirt )
         :type -
         :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment person pants )
+        :type -
+        :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment person dress )
+        :type -
+        :rank 2
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment person extinguisher )
+        :type -
+        :rank 4
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment person shrimp )
+        :type -
+        :rank 5
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment person bread )
+        :type -
+        :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment person fish )
+        :type -
+        :rank 5
     )
     ( :ethical-rule safetyRule
         :parameters (?r - robot ?person - person ?item - item)
