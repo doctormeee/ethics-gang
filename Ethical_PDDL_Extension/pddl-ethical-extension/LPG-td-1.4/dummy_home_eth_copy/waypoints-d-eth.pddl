@@ -7,8 +7,8 @@
     ( :requirements :strips :typing :equality :negative-preconditions :conditional-effects :ethical)
 
     ( :types
-        ; robot direction person item flavour xPos yPos - object
-        waypoint door room robot person item - object
+        ; robot direction person items flavour xPos yPos - object
+        waypoint door room robot person items - object
     )
 
     ( :constants
@@ -37,14 +37,19 @@
         ; define whether a door is open
         (door_opened ?d - door)
 
-        ; define whether a robot is holding an item
-        (robot_has_item ?r - robot ?item - item)
+        ; define whether a robot is holding an items
+        (robot_has_items ?r - robot ?i - items)
 
         ; define the current wellbeing of the person
         (content_person ?p - person)
 
-        ; define whether an item is in a room
-        (item_in_room ?item - item ?r - room)
+        
+        (person_needs_items ?p - person ?i -items)
+        ; define if 
+        (person_has_items ?p - person ?i -items)
+
+        ; define whether an items is in a room
+        ; (items_in_room ?i - items ?r - room)
         
         ; ( updated )
 
@@ -91,189 +96,357 @@
         )
     )
 
-    (:action pick_item
-        :parameters (?r - robot ?item - item ?room - room)
+    ; (:action pick_items
+    ;     :parameters (?r - robot ?i - items ?room - room)
+    ;     :precondition (and
+    ;         (not (robot_has_items ?r ?i))
+    ;         (items_in_room ?room ?i)
+    ;     )
+    ;     :effect (and
+    ;     (robot_has_items ?r ?i)
+    ;     (not (items_in_room ?room ?i))
+    ;     )
+    ; )
+
+    (:action give_items
+        :parameters (?r - robot ?p - person ?i - items)
         :precondition (and
-            (not (robot_has_item ?r ?item))
-            (item_in_room ?room ?item)
+            (person_needs_items ?p ?i)
+            (robot_has_items ?r ?i)
         )
         :effect (and
-        (robot_has_item ?r ?item)
-        (not (item_in_room ?room ?item))
+        (not (robot_has_items ?r ?i))
+        (person_has_items ?p ?i)
+        (content_person ?p)
         )
     )
 
-    (:action give_item
-        :parameters (?r - robot ?item - item)
-        :precondition (and
-            (robot_has_item ?r ?item)
-        )
-        :effect (and
-        (not (robot_has_item ?r ?item))
-        )
-    )
-
-    (:action interact
-        :parameters (?r - robot ?person - person)
-        :precondition ()
-        :effect (and 
-        (content_person ?person)
-        )
-    )
+    ; (:action interact
+    ;     :parameters (?r - robot ?person - person)
+    ;     :precondition ()
+    ;     :effect (and 
+    ;     (content_person ?person)
+    ;     )
+    ; )
 
     (:ethical-features
-        ( PrivacyBreachment ?room - room )
-        ( SafetyBreachment ?person - person ?item - item)
-        ( SocialNeed ?person - person)
+        ; ( PrivacyBreachment ?room - room )
+        ( SafetyBreachment ?person - person ?i - items)
+        ; ( SocialNeed ?person - person)
     )
+
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Bedroom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Balcony )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment LivingRoom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Bathroom )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment Kitchen )
+    ;     :type -
+    ;     :rank 1
+    ; )
+    ; ( :ethical-rank
+    ;     :feature
+    ;     ( PrivacyBreachment DiningRoom )
+    ;     :type -
+    ;     :rank 2
+    ; )
+    ; ( :ethical-rule privacyRule
+    ;     :parameters (?r - robot ?room - room)
+    ;     :precondition ( and 
+    ;     (robot_at_room ?r ?room)
+    ;     )
+    ;     :activation null
+    ;     :features ( PrivacyBreachment ?room )
+    ; )
+
+; ---------------------------------------------------
 
     ( :ethical-rank
         :feature
-        ( PrivacyBreachment Bedroom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Balcony )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment LivingRoom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Bathroom )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment Kitchen )
-        :type -
-        :rank 1
-    )
-    ( :ethical-rank
-        :feature
-        ( PrivacyBreachment DiningRoom )
-        :type -
-        :rank 2
-    )
-    ( :ethical-rule privacyRule
-        :parameters (?r - robot ?room - room)
-        :precondition ( and 
-        (robot_at_room ?r ?room)
-        )
-        :activation null
-        :features ( PrivacyBreachment ?room )
-    )
-
-    ( :ethical-rank
-        :feature
-        ( SafetyBreachment person medication )
+        ( SafetyBreachment Bob medication )
         :type -
         :rank 2
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person lighter )
+        ( SafetyBreachment Bob lighter )
         :type -
         :rank 9
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person key )
+        ( SafetyBreachment Bob key )
         :type -
         :rank 7
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person knife )
+        ( SafetyBreachment Bob knife )
         :type -
         :rank 9
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person scissors )
+        ( SafetyBreachment Bob scissors )
         :type -
         :rank 9
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person nuts )
+        ( SafetyBreachment Bob nuts )
         :type -
         :rank 5
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person shirt )
+        ( SafetyBreachment Bob shirt )
         :type -
         :rank 1
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person pants )
+        ( SafetyBreachment Bob pants )
         :type -
         :rank 1
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person dress )
+        ( SafetyBreachment Bob dress )
         :type -
         :rank 2
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person extinguisher )
+        ( SafetyBreachment Bob extinguisher )
         :type -
         :rank 4
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person shrimp )
+        ( SafetyBreachment Bob shrimp )
         :type -
         :rank 5
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person bread )
+        ( SafetyBreachment Bob bread )
         :type -
         :rank 1
     )
     ( :ethical-rank
         :feature
-        ( SafetyBreachment person wine )
+        ( SafetyBreachment Bob wine )
         :type -
         :rank 8
     )
-    ( :ethical-rule safetyPickRule
-        :parameters (?r - robot ?person - person ?item - item ?room - room)
-        :precondition (and 
-        (not (robot_has_item ?r ?item))
-        (robot_at_room ?r ?room)
-        )
-        :activation ( pick_item ( ?r ?item ?room ))
-        :features ( SafetyBreachment ?person ?item )
+
+; ---------------------------------------------------
+
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom medication )
+        :type -
+        :rank 2
     )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom lighter )
+        :type -
+        :rank 9
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom key )
+        :type -
+        :rank 7
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom knife )
+        :type -
+        :rank 9
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom scissors )
+        :type -
+        :rank 9
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom nuts )
+        :type -
+        :rank 5
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom shirt )
+        :type -
+        :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom pants )
+        :type -
+        :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom dress )
+        :type -
+        :rank 2
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom extinguisher )
+        :type -
+        :rank 4
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom shrimp )
+        :type -
+        :rank 5
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom bread )
+        :type -
+        :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Tom wine )
+        :type -
+        :rank 8
+    )
+
+; ---------------------------------------------------
+
+
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby medication )
+        :type -
+        :rank 2
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby lighter )
+        :type -
+        :rank 9
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby key )
+        :type -
+        :rank 7
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby knife )
+        :type -
+        :rank 9
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby scissors )
+        :type -
+        :rank 9
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby nuts )
+        :type -
+        :rank 5
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby shirt )
+        :type -
+        :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby pants )
+        :type -
+        :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby dress )
+        :type -
+        :rank 2
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby extinguisher )
+        :type -
+        :rank 4
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby shrimp )
+        :type -
+        :rank 5
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby bread )
+        :type -
+        :rank 1
+    )
+    ( :ethical-rank
+        :feature
+        ( SafetyBreachment Abby wine )
+        :type -
+        :rank 8
+    )
+
+    ; ( :ethical-rule safetyPickRule
+    ;     :parameters (?r - robot ?person - person ?i - items ?room - room)
+    ;     :precondition (and 
+    ;     (not (robot_has_items ?r ?i))
+    ;     (robot_at_room ?r ?room)
+    ;     )
+    ;     :activation ( pick_items ( ?r ?i ?room ))
+    ;     :features ( SafetyBreachment ?person ?i )
+    ; )
     ( :ethical-rule safetyGiveRule
-        :parameters (?r - robot ?person - person ?item - item ?room - room)
+        :parameters (?r - robot ?p - person ?i - items ?room - room)
         :precondition (and 
-        (robot_has_item ?r ?item) 
+        (robot_has_items ?r ?i) 
         (robot_at_room ?r ?room)
         )
-        :activation ( give_item ( ?r ?item ))
-        :features ( SafetyBreachment ?person ?item )
+        :activation ( give_items ( ?r ?p ?i ))
+        :features ( SafetyBreachment ?p ?i )
     )
 
-    ( :ethical-rule socialRule
-        :parameters (?r - robot ?person - person ?item - item)
-        :precondition ()
-        :activation ( interact ( ?r ?person ))
-        :features ( SocialNeed ?person)
-    )
-
+    ; ( :ethical-rule socialRule
+    ;     :parameters (?r - robot ?person - person ?i - items)
+    ;     :precondition ()
+    ;     :activation ( interact ( ?r ?person ))
+    ;     :features ( SocialNeed ?person)
+    ; )
 )

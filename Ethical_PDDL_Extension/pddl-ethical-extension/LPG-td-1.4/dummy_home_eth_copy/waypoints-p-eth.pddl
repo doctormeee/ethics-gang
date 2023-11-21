@@ -17,9 +17,43 @@
 
 
     wp_Balcony wp_Kitchen wp_DiningRoom wp_LivingRoom wp_Bathroom - waypoint ; corresponds to the "rooms"
+
+
+  ; -----------------------------------------------------------------------------------------------
+    Bob Tom Abby - person
+
+    medication lighter key knife scissors nuts shirt pants dress extinguisher shrimp bread wine - items
+
+
   )
   (:init
   ; define intial state
+
+  (robot_has_items leia medication)
+  (robot_has_items leia lighter)
+  (robot_has_items leia key)
+  (robot_has_items leia knife)
+  (robot_has_items leia scissors)
+  (robot_has_items leia nuts)
+  (robot_has_items leia shirt)
+  (robot_has_items leia pants)
+
+  (robot_has_items leia dress)
+  (robot_has_items leia extinguisher)
+  (robot_has_items leia shrimp)
+  (robot_has_items leia bread)
+  (robot_has_items leia wine)
+
+  (person_needs_items Abby knife)
+  (person_needs_items Abby scissors)
+
+  (person_needs_items Bob knife)
+  (person_needs_items Bob scissors)
+
+  (person_needs_items Tom knife)
+  (person_needs_items Tom scissors)
+
+
 
   (door_connected Bathroom_to_LivingRoom Bathroom LivingRoom wp_Bathroom_to_LivingRoom wp_LivingRoom_from_Bathroom)
   (door_connected LivingRoom_to_Bathroom LivingRoom Bathroom wp_LivingRoom_to_Bathroom wp_Bathroom_from_LivingRoom)
@@ -58,7 +92,7 @@
   
   (robot_at leia wp_Bedroom_to_Balcony)
   (robot_at_room leia Bedroom)
-  (robot_has_item leia knife)
+  (robot_has_items leia knife)
 
   ; (robot_at leia wp_LivingRoom_to_Bathroom)
   ; (robot_at_room leia LivingRoom)
@@ -108,7 +142,10 @@
   )
   (:goal (and
       ; goal state
-      (robot_at_room leia Bathroom)
+      ; (robot_at_room leia Bathroom)
+      (content_person Abby)
+      (content_person Tom)
+      (content_person Bob)
       ; (robot_at_room leia LivingRoom)
     )
   )
