@@ -11,4 +11,4 @@ This project aims to program a robot (Jetbot) which would run based on the follo
 5. Given the chosen set of instructions, the robot executes navigation toward completing the given objective, employing computer vision techniques for obstacle avoidance and object detection.
 
 ## About This Repo
-This Repo consists of files that incorporte the PDDL Ethical Extension, which provides an automated way of PDDL planning with ethical considerations.
+This Repo consists of files that incorporate the PDDL Ethical Extension, which provides an automated way of PDDL planning with ethical considerations.
